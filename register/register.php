@@ -7,10 +7,10 @@
 <title>Tur.ua</title>
 </head>
 <body>
-<?php require_once ("register-base.php");?>
+<?php //require_once ("register-base.php");?>
 <div class="bg-bot">
     <div class="karkas">
-        <?php require_once "../lib/header.php";?>
+        <?php //require_once "../lib/header.php";?>
         <div class="menu-main">
         <table border="0" cellpadding="0" cellspacing="0" >
         <tbody>
@@ -41,9 +41,7 @@
         Если вы не хотите заполнять форму на сайте, вы можете позвонить непосредственно менеджеру отдела онлайн-бронирования по телефонам <span>(050)353-44-89, (067)658-45-61</span> и запросить у него форму в виде таблицы Excel. Менеджер отправит ее на ваш электронный адрес. На основании заполненных данных из этой таблицы менеджер сможет забронировать тур в системе. Вы так же можете скачать форму по <a href="">ссылке</a> и отправить ее на наш электронный адрес  <span>online@tyrist.ua</span></p> 
            </div>
            <form action="../regist-done/register-done.php" method="get">
-           <?php
-            for ($i=1;$i<=$hum;$i++){   
-               ?>
+
            <div class="single-tyrist">
                <h2>Информация о туристе <?php echo $i;?></h2>
                <div class="input-box">
@@ -60,9 +58,7 @@
         <p>Имя и Фамилию необходимо заполнять латинскими буквами, как в загранпаспорте</p>
                </div>
            </div>
-           <?php
-            }
-               ?>
+
            <div class="turist-foot">
                <h1>Дополнительная информация</h1>
                <input type="text"  name="contact" placeholder="Контактный телефон">
@@ -102,7 +98,7 @@
 
 
         </div>
-        <?php require_once "../lib/footer.php";?>
+        <?php //require_once "../lib/footer.php";?>
     </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

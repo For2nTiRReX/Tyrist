@@ -80,22 +80,22 @@
     </div>
     </div>
     <div class="hotel-holder">
-            <h2>Найдено: <?php   echo  "$result->num_rows ";
-            if ($result->num_rows == 0){echo $skl = "туров";}
-            else if ($result->num_rows == 1){echo $skl = "тур";}
-            else if ($result->num_rows == 2){echo $skl = "тура";}
-            else if ($result->num_rows > 2){echo $skl = "туров";}
+            <h2>Найдено: <?php  echo  count($result);
+            if (count($result) == 0){echo $skl = " туров";}
+            else if (count($result) == 1){echo $skl = " тур";}
+            else if (count($result) == 2){echo $skl = " тура";}
+            else if (count($result) > 2){echo $skl = " туров";}
             ?> </h2>
             <?php
-            for(;$row = $result->fetch_assoc();){
+            foreach($result as $row){
             ?>
          <div class='single-hot' > 
          <a href='<?php echo "/Ful-info/ful-info.php?id_hotel=".$row["id"];?>' >
-         <img src='<?php echo $row["img"];?>'></a>                
+         <img src='<?php echo $row["thumbnail"];?>'></a>
          <a href='/Maps/map.php' id='countryA'><?php echo $row["country"];?></a>
-         <a href='#' id='countryB'><?php echo $row["type"];?></a>          <br> 
+         <a href='#' id='countryB'><?php echo $row["whereabout"];?></a>          <br>
          <a href="<?php echo "/Ful-info/ful-info.php?id_hotel=".$row["id"];?>" class="single-a">
-         <?php echo $row["name"];?></a>        
+         <?php echo $row["title"];?></a>
          <span class="sp-m">Клас отеля</span>
          <img src="Img/star-small.png" alt="">
          <img src="Img/star-small.png" alt="" class="hide">
@@ -103,7 +103,7 @@
          <img src="Img/star-small.png" alt="" class="hide">
           <img src="Img/star-small.png" alt="" class="hide">
          <br>
-         <p class="display"><?php echo $row["about"];?></p>
+         <p class="display"><?php echo $row["content"];?></p>
          <div class="cena-d">
              от<span><?php echo $row["price"];?> </span> грн.
              <p>За номер</p>

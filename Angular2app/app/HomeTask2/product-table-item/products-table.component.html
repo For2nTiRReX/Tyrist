@@ -1,0 +1,17 @@
+<tbody>
+    <tr>
+        <th>Item id</th>
+        <th>Item name</th>
+        <th>Item price</th>
+        <th>Delete item</th>
+    </tr>
+    <tr *ngFor="let productItem of productItemList | slice:0:rows"  #tr [ngClass]="{'bg-danger': productItem.price > 300}">
+        <td>{{productItem.id}}</td>
+        <td>{{productItem.name}}</td>
+        <td>{{productItem.price}}</td>
+        <td><a href="/HomeLesson2_1#delete" (click)="deleteElement(productItem.id);">Delete element</a></td>
+    </tr>
+</tbody>
+
+
+

@@ -1,0 +1,11 @@
+<div class="filters form-group">
+    <label for="category">Chose category</label>
+    <select class="form-control" name="category" id="category" [(ngModel)]="currentCategory" (ngModelChange)="categoryFilterProducts()">
+        <option *ngFor="let categoryItem of Categories" [value]="categoryItem.slug"  data-id="{{categoryItem.id}}">{{categoryItem.name}}</option>
+    </select>
+</div>
+<table #tableWrapper class="table table-bordered table-striped"  productTable [rows]="rows" [productItemList]="exportProduct" (deleteElementEvent)="deleteElement($event)" [category]="category" ></table>
+
+<product-add-form (addElementEvent)="refreshService(evenet)"><product-add-form>
+
+

@@ -7,10 +7,10 @@
 <title>Tur.ua</title>
 </head>
 <body>
-<?php require_once ("info-base.php");?>
+<?php //require_once ("info-base.php");?>
 <div class="bg-bot">
     <div class="karkas">
-        <?php require_once "../lib/header.php";?>
+        <?php //require_once "../lib/header.php";?>
         <div class="menu-main">
             <table border="0" cellpadding="0" cellspacing="0" >
                 <tbody>
@@ -27,13 +27,7 @@
             </table>
         </div>
         <div class="center">
-            <ul>
-               <li><a href="/Maps/map.php">Страны</a></li>
-               <li><a href="/Maps/map.php"><?php echo $row['country']?></a></li>
-               <li><a href=""><?php echo $row['type']?></a></li>
-               <li><p><?php echo $row['name']?></p></li>
-            </ul>
-            <h2><?php echo $row['name']?> <br><span><?php echo $row['country']?></span></h2>  
+            <h2>Name<br><span>Country</span></h2>
             <div class="info-holder">
               <div class="hotel-img">
                   <a href=""><img src="<?php echo $row['img_big']?>" alt=""></a>
@@ -118,14 +112,14 @@
             <input type="submit" id="sub-com"><br>
             </div> 
             <div class="vivod-base">
-            <?
+            <?/*
             while($row2 = $result2->fetch_assoc()){
             echo('<p><span>'.$row2['date'].'</span><span class="user">'.$row2['id_user'].'</span>'.$row2['text'].'</p>');
-            }
+            }*/
             ?>
             </div>
         </div>
-        <?php require_once "../lib/footer.php";?>
+        <?php //require_once "../lib/footer.php";?>
     </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

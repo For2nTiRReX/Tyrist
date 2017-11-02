@@ -1,0 +1,19 @@
+<div class="add-product-controls">
+    <div class="form-group">
+        <label for="addNewName">Enter Name</label>
+        <input  class="form-control" type="text" name="addNewName" id="addNewName" [(ngModel)]="addNewName">
+    </div>
+    <div class="form-group">
+        <label for="addNewCategory">Enter Category</label>
+        <input class="form-control" type="text" name="addNewCategory" id="addNewCategory" [(ngModel)]="addNewCategory">
+    </div>
+    <div class="form-group">
+        <label for="addNewPrice">Enter Price</label>
+        <input class="form-control" type="text" name="addNewPrice" id="addNewPrice" [(ngModel)]="addNewPrice">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-lg" id="addNewProduct" (click)="addNewProduct()">Add New Product</button>
+    </div>
+</div>
+
+
